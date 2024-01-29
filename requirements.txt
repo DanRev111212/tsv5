@@ -1,0 +1,12 @@
+streamlit
+selenium
+matplotlib
+wordcloud
+pandas
+seaborn
+ntscraper
+geopy
+tqdm
+textblob
+plotly
+vaderSentiment
