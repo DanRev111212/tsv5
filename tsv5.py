@@ -16,7 +16,10 @@ def perform_sentiment_analysis(tweets):
 # Define a function to fetch tweets
 def fetch_tweets(username, term, location, num_tweets=100):
     options = webdriver.ChromeOptions()
-    driver = webdriver.Chrome(options=options)
+    options.add_argument('--no-sandbox')  # Required for running in a sandboxed environment like Streamlit Cloud
+    options.add_argument('--disable-dev-shm-usage')  # Required for running in a sandboxed environment like Streamlit Cloud
+    options.add_argument('--headless')  # Run Chrome in headless mode
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
     try:
         if username:
