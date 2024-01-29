@@ -11,3 +11,4 @@ textblob
 plotly
 vaderSentiment
 ChromeDriverManager
+webdriver_manager
